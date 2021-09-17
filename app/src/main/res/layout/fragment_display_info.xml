@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This layout is where the app displays the tip information
+    to the user. They can also navigate back to the previous
+    page to reenter new bill information.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/totalCostTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Cost:"
+        android:gravity="center"
+        android:textSize="35dp"
+        />
+
+    <TextView
+        android:id="@+id/actualTotalCost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        android:textSize="35dp"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/tipAmountTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tip Amount:"
+        android:gravity="center"
+        android:textSize="35dp"
+        />
+
+    <TextView
+        android:id="@+id/actualTipAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        android:textSize="35dp"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/origBillTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Original Bill: "
+        android:gravity="center"
+        android:textSize="35dp"
+        />
+
+    <TextView
+        android:id="@+id/actualOrigBill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        android:textSize="35dp"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        />
+
+    <Button
+        android:id="@+id/recalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="recalculate"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>

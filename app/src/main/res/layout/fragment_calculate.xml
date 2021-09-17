@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This layout is where the user will input their bill
+    and tipping preferences.
+-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="32dp"
+    android:paddingVertical="32dp">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <!-- Directions for bill amount box -->
+    <TextView
+        android:id="@+id/billDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="Total Bill:"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- actual bill amount box -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enterBillLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bill Price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline1">
+        <!--change style ?-->
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enterBill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Directions for tip slider -->
+    <TextView
+        android:id="@+id/tipDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="Tip Amount:   20%"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- actual tip slider -->
+    <SeekBar
+        android:id="@+id/percentTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="50"
+        android:min="0"
+        android:progress="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="204dp" />
+
+    <!-- Directions for rounding selection -->
+    <TextView
+        android:id="@+id/roundingDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="Select Rounding Option:"
+        app:layout_constraintBottom_toTopOf="@+id/roundingOption"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Actual rounding selection -->
+    <RadioGroup
+        android:id="@+id/roundingOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6">
+
+        <RadioButton
+            android:id="@+id/roundingNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No rounding"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/roundingTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Round tip to nearest dollar" />
+
+        <RadioButton
+            android:id="@+id/roundingBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Round total bill to nearest dollar" />
+
+    </RadioGroup>
+
+    <!-- Calculate Button -->
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:gravity="center"
+        android:text="calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="332dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
